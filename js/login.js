@@ -1,5 +1,5 @@
 const xhttp = new XMLHttpRequest();
-const endPointRoot = 'https://isaprojectauth.azurewebsites.net/';
+const endPointRoot = 'https://prernadohun.com/';
 const resource="login";
 
 const email = document.getElementById('email');

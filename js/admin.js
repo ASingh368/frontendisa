@@ -1,4 +1,4 @@
-const endPointRoot = 'https://isaprojectauth.azurewebsites.net/';
+const endPointRoot = 'https://prernadohun.com/';
 const resource="admins/stats";
 const message = "There is no Admin stat data";
 

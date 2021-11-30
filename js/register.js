@@ -1,5 +1,5 @@
 const resource="register";
-const endPointRoot = 'https://isaprojectauth.azurewebsites.net/';
+const endPointRoot = 'https://prernadohun.com/';
 
 const username = document.getElementById('username');
 const email = document.getElementById('email');
