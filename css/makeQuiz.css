@@ -1,0 +1,19 @@
+.bg-mynav {
+    background-color:#2c3e50;
+    color:white;
+}
+h2 {
+    color:white
+}
+th {
+    color:white
+}
+tr {
+    color:white
+}
+.btn-success {
+    margin-right: 10px;
+}
+#back span {
+    color:white,
+}
