@@ -2,13 +2,13 @@ const xhttp = new XMLHttpRequest();
 const endPointRoot = 'https://prernadohun.com/';
 const resource="login";
 
-const email = document.getElementById('email');
+const username = document.getElementById('username');
 const password = document.getElementById('password');
 const message = document.getElementById('message');
 
 const loginHandler = (e) => {
   e.preventDefault();
-  const jsonContent = {'email': email.value, 'password': password.value};
+  const jsonContent = {'username': username.value, 'password': password.value};
 
   xhttp.open("POST", endPointRoot+resource, true);
   xhttp.setRequestHeader('Content-type', 'application/json');
