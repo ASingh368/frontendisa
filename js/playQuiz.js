@@ -19,6 +19,7 @@ $(document).ready(async () => {
         });
     };
 
+
     let QList;
 
     await getAllQuestions().then((value) => {

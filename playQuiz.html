@@ -13,16 +13,21 @@
             <div id="infoContainer">
                 <p>Question <span id="questionProgress">0 / 10</span></p>
                 <p>Mark: <span id="mark"> 0</span></p>
-                <div id="endButton">
+                <div id="endButton" onclick="alertfunction()">
                     <span>End Quiz</span>
+                    <script>    
+                        function alertfunction(){
+                            alert("Quiz over, Thanks for playing.");
+                        }
+                    </script>
                 </div><br> <br> <br> <br>
-                <div id="backButton">
-                    <span><a href="landingPage.html">Go Back</a></span>
-                </div>
+                <a href="landingPage.html"><div id="backButton">
+                    <span>Go Back</span>
+                </div></a>
             </div>
             <div id="questionContainer">
                 <p id="question">
-                    Q: How many provinces are there in Canada?
+                    Please add questions before you continue.
                 </p>
             </div>
             <div id="answerListContainer"></div>
