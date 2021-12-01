@@ -19,7 +19,6 @@ $(document).ready(async () => {
         });
     };
 
-
     let QList;
 
     await getAllQuestions().then((value) => {
@@ -28,14 +27,13 @@ $(document).ready(async () => {
     console.log("QList: " + QList);
 
     let marks = 0;
+    let accumulated = 0;
     let maxQuestions = QList.length;
     let currentQuestionNumber = 0;
     let answer;
     let selected = false;
 
     const questionOnClick = (event) => {
-        // If the clicked element doesn't have the right selector, bail
-
         if (event.target.classList[0] === 'answerItem') {
             const marksElem = document.getElementById('mark');
             const correctElem = $(`#${answer}`);
@@ -48,6 +46,7 @@ $(document).ready(async () => {
                 marksElem.innerHTML = `${marks}`;
             } else {
                 marks += 1;
+                accumulated++;
                 marksElem.innerHTML = `${marks}`;
             }
 
@@ -59,8 +58,6 @@ $(document).ready(async () => {
             );
 
             $('#nextButton').removeClass('hideButton');
-
-            // Don't follow the link
             event.preventDefault();
         }
     };
@@ -99,9 +96,17 @@ $(document).ready(async () => {
     };
 
     const endGame = () => {
+        let score = Math.round(accumulated*100/maxQuestions);
+        let msg = "";
+        if (score > 50) {
+            msg = "\nGood Job! You passed!";
+        } else {
+            msg = "\nYou are failed!!";
+        }
+        alert("Your score: " + score + "%" + msg);
         window.sessionStorage.setItem('userScore', marks);
         window.sessionStorage.setItem('questionCount', maxQuestions);
-        location.reload();
+        window.location.assign('./landingPage.html');
     };
 
     $('#nextButton').click((event) => {
