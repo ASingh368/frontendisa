@@ -101,7 +101,7 @@ $(document).ready(async () => {
         if (score > 50) {
             msg = "\nGood Job! You passed!";
         } else {
-            msg = "\nYou are failed!!";
+            msg = "\nYou have failed :( ";
         }
         alert("Your score: " + score + "%" + msg);
         window.sessionStorage.setItem('userScore', marks);
