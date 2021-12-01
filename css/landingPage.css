@@ -47,6 +47,16 @@
     border-radius: 10px;
 }
 
+#swaggerdocs {
+    float: left;
+    border-radius: 10px;
+}
+
+#swaggerdocs2 {
+    float: right;
+    border-radius: 10px;
+}
+
 .button {
     width: 200px;
     height: 89px;

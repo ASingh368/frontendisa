@@ -24,7 +24,7 @@ function showCreateBox() {
 
   Swal.fire({
     title: 'Create new question',
-    html: ' <input id="id" type="hidden">' + '<input id="question" class="swal2-input" placeholder="Question">' + '<input id="option1" class="swal2-input" placeholder="Option1">' + ' <input id="option2" class="swal2-input" placeholder="Option2">' + '<input id="option3" class="swal2-input"  placeholder="Option3">' + '<input id="option4" class="swal2-input" placeholder="Option4">' + '<input id="answer" class="swal2-input" placeholder="CorrectAnswer">',
+    html: ' <input id="id" type="hidden">' + '<input id="question" class="swal2-input" placeholder="Question">' + '<input id="option1" class="swal2-input" placeholder="Option1">' + ' <input id="option2" class="swal2-input" placeholder="Option2">' + '<input id="option3" class="swal2-input"  placeholder="Option3">' + '<input id="option4" class="swal2-input" placeholder="Option4">' + '<input id="answer" type ="number" class="swal2-input" pattern ="[0-9]" min ="1" max ="4" placeholder="Answer" width ="300px">',
     focusConfirm: false,
     preConfirm: () => {
       questionCreate();
@@ -116,7 +116,7 @@ function showEditBox(id) {
           '<input id="option2" class="swal2-input" placeholder="Option 2" value="' + user['option2'] + '">' +
           '<input id="option3" class="swal2-input" placeholder="Option 3" value="' + user['option3'] + '">' +
           '<input id="option4" class="swal2-input" placeholder="Option 4" value="' + user['option4'] + '">' +
-          '<input id="answer" class="swal2-input" placeholder="Answer" value="' + user['answer'] + '">',
+          '<input type ="number" id="answer" class="swal2-input" placeholder="Answer" pattern ="[0-9]" min="1" max="4" value=""' + user['answer'] + '">',
         focusConfirm: false,
         preConfirm: () => {
           quesEdit();
